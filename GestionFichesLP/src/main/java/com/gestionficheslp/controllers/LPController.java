@@ -12,4 +12,5 @@ public class LPController {
 		model.addAttribute("message", "BONJOUR ADRIEN ! Installe Eclipse ^^");
 		return "index";
 	}
+	
 }

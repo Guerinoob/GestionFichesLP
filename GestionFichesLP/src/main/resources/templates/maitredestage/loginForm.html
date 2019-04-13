@@ -1,0 +1,26 @@
+{{ > header}}
+
+    <h1>Connexion MaÃƒÂ®tre de stage</h1>
+
+    <form method="POST" action="loginPost" class="ui fluid form">
+        <fieldset>
+        <legend>Connexion</legend>
+
+            <div class="field">
+                <label for="username">Identifiant : </label>
+                <input type="text" name="username" id="username" />
+            </div>
+
+            <div class="field">
+                <label for"password">Mot de passe : </label>
+                <input type="password" name="password" id="password" />
+            </div>
+
+            <div class="field">
+                <input type="submit" class="ui positive button" name="submit" id="submit" value="Se connecter" />
+            </div>
+
+        </fieldset>
+    </form>
+
+{{ > footer}}
