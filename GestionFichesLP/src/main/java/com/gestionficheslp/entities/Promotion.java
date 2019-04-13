@@ -25,9 +25,8 @@ public class Promotion {
 		super();
 	}
 
-	public Promotion(int id, @NotNull String annee, List<Etudiant> etudiants) {
+	public Promotion(@NotNull String annee, List<Etudiant> etudiants) {
 		super();
-		this.id = id;
 		this.annee = annee;
 		this.etudiants = etudiants;
 	}

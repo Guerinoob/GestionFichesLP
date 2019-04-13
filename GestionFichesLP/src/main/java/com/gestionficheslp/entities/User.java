@@ -15,6 +15,10 @@ public abstract class User {
 
 	@NotNull
 	private String username;
+	
+	public User() {
+		username = "bite";
+	}
 
 	public int getId() {
 		return id;

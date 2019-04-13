@@ -3,10 +3,15 @@ package com.gestionficheslp.controllers;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.view.RedirectView;
+
+import com.gestionficheslp.entities.Maitredestage;
+import com.gestionficheslp.entities.User;
+import com.gestionficheslp.repositories.MaitredestageRepository;
 
 
 
@@ -15,7 +20,7 @@ import org.springframework.web.servlet.view.RedirectView;
 public class MaitreDeStageController {
 	
 	@Autowired
-	private MaitreDeStageRepository maitreDeStageRepository;
+	private MaitredestageRepository maitreDeStageRepository;
 	
 	@RequestMapping("/login")
 	public String loginForm() {
@@ -28,10 +33,11 @@ public class MaitreDeStageController {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
-		MaitreDeStage user = maitreDeStageRepository.findByUsername(username);
+		Maitredestage user = maitreDeStageRepository.findByUsername(username);
 		
 		if(BCrypt.checkpw(password, user.getPassword())) {
 			session.setAttribute("user", (User)user);
+			return new RedirectView("/login"); 
 		}
 		else
 			return new RedirectView("/login");
