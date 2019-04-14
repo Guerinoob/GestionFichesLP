@@ -33,10 +33,9 @@ public class Entreprise {
 		super();
 	}
 
-	public Entreprise(int id, @NotNull String nom, String adresse, String codepostal, String ville, String telephone,
+	public Entreprise(@NotNull String nom, String adresse, String codepostal, String ville, String telephone,
 			List<Alternance> alternances) {
 		super();
-		this.id = id;
 		this.nom = nom;
 		this.adresse = adresse;
 		this.codepostal = codepostal;

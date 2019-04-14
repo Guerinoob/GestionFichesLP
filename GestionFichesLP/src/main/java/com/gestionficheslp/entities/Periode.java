@@ -28,7 +28,7 @@ public class Periode {
 		super();
 	}
 
-	public Periode(int id, @NotNull int trimestre, @NotNull String datedebut, List<Fiche> fiches) {
+	public Periode(@NotNull int trimestre, @NotNull String datedebut, List<Fiche> fiches) {
 		super();
 		this.id = id;
 		this.trimestre = trimestre;

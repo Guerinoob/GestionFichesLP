@@ -34,7 +34,7 @@ public class Fiche {
 		super();
 	}
 
-	public Fiche(int id, String chemin, @NotNull boolean valide, @NotNull boolean visibleEtudiant,
+	public Fiche(String chemin, @NotNull boolean valide, @NotNull boolean visibleEtudiant,
 			@NotNull boolean visibleMaitredestage, Periode periode, Alternance alternance) {
 		super();
 		this.id = id;

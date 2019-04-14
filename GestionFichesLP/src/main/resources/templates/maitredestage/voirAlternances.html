@@ -1,0 +1,43 @@
+{{ > header}}
+
+    <h1>Mes alternants</h1>
+
+    <table class="ui table">
+        <thead>
+            <th>Étudiant</th>
+            <th>Début de l'alternance</th>
+            <th>Fin de l'alternance</th>
+            <th>Tuteurs</th>
+            <th>Fiches</th>
+            <th>Ajouter</th>
+        </thead>
+        
+        <tbody>
+            {{#user.alternances}}
+                <tr>
+                    <td>{{etudiant.prenom}} {{etudiant.nom}}</td>
+                    <td>{{DateDebut}}</td>
+                    <td>{{DateFin}}</td>
+                    <td>
+                        {{#tuteurs}}
+                            {{prenom}} {{nom}} | 
+                        {{/tuteurs}}
+                    </td>
+                    <td>
+                        {{#fiches}}
+                            <div>
+                                <button class="ui button">Modifier la fiche</button>
+                                <button class="ui button">Télécharger la fiche</button>
+                                <button class="ui button">Dupliquer</button>
+                            </div>
+                        {{/fiches}}
+                    </td>
+                    <td>
+                        <button class="ui positive button">Ajouter</button>
+                    </td>
+                </tr>
+            {{/user.alternances}}
+        </tbody>
+    </table>
+
+{{ > footer}}

@@ -39,10 +39,9 @@ public class Alternance {
 		super();
 	}
 
-	public Alternance(int id, String dateDebut, String dateFin, Etudiant etudiant, Maitredestage maitredestage,
+	public Alternance(String dateDebut, String dateFin, Etudiant etudiant, Maitredestage maitredestage,
 			Entreprise entreprise, List<Fiche> fiches, List<Tuteuriut> tuteurs) {
 		super();
-		this.id = id;
 		DateDebut = dateDebut;
 		DateFin = dateFin;
 		this.etudiant = etudiant;
